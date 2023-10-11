@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">And Now Horoscopes</string>
-    <string name="next_zodiac_cta">Next Zodiac</string>
+    <string name="horoscope_cta">Choose Zodiac</string>
 </resources>
