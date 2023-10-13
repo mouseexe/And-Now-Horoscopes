@@ -18,7 +18,7 @@ class HoroscopeViewModel @Inject constructor(
 ): ViewModel() {
 
     // TODO - figure out how to make this less messy
-    private val _horoscope = MutableStateFlow<Horoscope>(Horoscope.Default)
+    private val _horoscope = MutableStateFlow<Horoscope>(Horoscope.Default())
     val horoscope = _horoscope.asStateFlow()
 
     private val zodiacs = Zodiac.values()
@@ -38,8 +38,8 @@ class HoroscopeViewModel @Inject constructor(
         zodiac = sign
     }
 
-    sealed class Horoscope {
-        data object Default : Horoscope()
-        data class Success(val horoscope: String) : Horoscope()
+    sealed class Horoscope(open val horoscope: String) {
+        data class Default(override val horoscope: String = "") : Horoscope(horoscope = horoscope)
+        data class Success(override val horoscope: String) : Horoscope(horoscope = horoscope)
     }
 }

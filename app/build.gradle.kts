@@ -31,7 +31,7 @@ android {
 
     defaultConfig {
         applicationId = "gay.spiders.andnowhoroscopes"
-        minSdk = 34
+        minSdk = 30
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
