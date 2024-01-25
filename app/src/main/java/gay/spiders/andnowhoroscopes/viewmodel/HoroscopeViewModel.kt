@@ -17,7 +17,6 @@ class HoroscopeViewModel @Inject constructor(
     private val horoscopeRepository: HoroscopeRepository
 ): ViewModel() {
 
-    // TODO - figure out how to make this less messy
     private val _horoscope = MutableStateFlow<Horoscope>(Horoscope.Default())
     val horoscope = _horoscope.asStateFlow()
 
